@@ -1,0 +1,635 @@
+*{
+  margin: 0;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+html, body{
+  background-color:#FDFDFD;
+  width:100%;
+}
+
+.menu_principal{
+  background-color: #FDFDFD;
+  height: 130px;
+  width: 100%;
+  position:fixed;
+  
+  display: grid, inline-block, center;
+  grid-template-columns: repeat(22, minmax(0, 1fr));
+
+  box-shadow: 0px 3px 6px rgba(152, 152, 152, 0.2);
+  top:0;
+  z-index:100;
+}
+
+.menu{
+  display:flex;
+  
+  align-items: center;
+  justify-content: center;
+  grid-row: 1;
+
+  
+  margin-right: 129px;
+
+  padding-top: 1.2%;
+  width:100%;
+  column-gap:minmax(15px,53px);
+  flex-wrap: wrap;
+  grid-column: 6 / 17
+}
+
+.menu ul{
+  justify-content: space-between;
+  display: flex;
+  padding-left: 0;
+  gap:90px;
+}
+
+.menu ul li{
+  list-style: none;
+  display:inline;
+  justify-content: space-between;
+}
+
+.logo{
+  display: inline-block;
+  width: 7.1%;
+  margin-right: 110px;
+  padding-left: 5%;
+}
+
+.categoria1 {
+  color: #7D7D7D;
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: 600;
+  font-size: minmax(5px 16px);
+  grid-row: 1;
+  text-decoration: none;
+  position:relative;
+}
+
+categoria1, a:hover{
+  color:#28284A;
+  opacity:100%;
+}
+
+.categoria2{
+  color: #7D7D7D;
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: 600;
+  font-size: minmax(5px 16px);
+  grid-row: 1;
+  text-decoration: none;
+  margin-right: 110px;
+  position:relative;
+}
+
+categoria2, a:hover{
+  color:#28284A;
+  opacity:100%;
+}
+
+.busca{
+  display: inline-block;
+  grid-row:1;
+  width: 25px;
+  background: none;
+  border: none;
+  padding-right: 76px;
+  padding-top: 10px;
+}
+
+.carrinho{
+  display: inline-block;
+  grid-row:1;
+  width: 25px;
+  background: none;
+  border: none;
+  padding-right: 76px;
+  padding-top: 10px;
+}
+
+.perfil{
+  display: inline-block;
+  grid-row:1;
+  width: 26px;
+  background: none;
+  border: none;
+  margin-right: 5%;
+}
+
+/* animação da linhazinha quando vc coloca o mouse em uma categoria*/
+.categoria1::before{
+  content:"";
+  background-color: #28284A;
+  position:absolute;
+  left:0;
+  bottom:0;
+  height: 3px;
+  width: 0%;
+  transition: 0.2s ease-out;
+}
+
+.categoria1:hover::before{
+  content:"";
+  color:#28284A;
+  background-color: #28284A;
+  position:absolute;
+  left:0;
+  bottom:0;
+  height: 3px;
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+
+
+
+/* animação da linhazinha quando vc coloca o mouse em uma categoria*/
+.categoria2::before{
+  content:"";
+  background-color: #28284A;
+  position:absolute;
+  left:0;
+  bottom:0;
+  height: 3px;
+  width: 0%;
+  transition: 0.2s ease-out;
+}
+
+.categoria2:hover::before{
+  content:"";
+  color:#28284A;
+  background-color: #28284A;
+  position:absolute;
+  left:0;
+  bottom:0;
+  height: 3px;
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+
+/*CABOU O MENU*/
+
+
+/*página*/
+body {
+  font-family: Hindi , sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+
+main  {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+
+.banner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 213px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.banner img{
+  width: 100%;
+  height: 213px;
+}
+
+.banner p {
+  position: absolute;
+  justify-content: center;
+  top: 207px;
+  right: 120px;
+  left: 40px;
+  color: white;
+  font-family: 'Hind Guntur';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+}
+   
+
+/* FILTRO */
+
+.filtro{
+  margin-left: 14%;
+  width: 72%;
+  margin-top: 2%;
+  margin-bottom: 2;
+}
+
+.filtrar-itens{
+  display:flex;
+  flex-direction: row;
+  gap:0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #737373;
+  padding-bottom: 10px;
+}
+
+.dropdown {
+  position: relative;
+  width:900px;
+  display: flex;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #737373;
+  background: none;
+  border: none;
+  outline: none;
+  gap: 70px;
+  margin-right: 95px;
+}
+
+.categorias{
+  display:flex;
+  flex-direction: row;
+  gap:12px;
+  cursor: pointer;
+}
+
+.categorias:hover{
+  color: #8854D3;
+}
+
+.seta_filtro{
+  margin-top: 3px;
+  position: relative;
+}
+
+.seta_filtro_tamanho{
+  width: 20px;
+  height: 12px;
+}
+
+.seta_overlay{
+  position:absolute;
+  top:0;
+  opacity: 0;
+  bottom:0;
+  cursor:pointer;
+}
+
+.categorias:hover .seta_overlay{
+  opacity: 1;
+  color: #8854D3;
+}
+
+.ordenar{
+  display:flex;
+  flex-direction: row;
+  gap:12px;
+}
+
+.seta_ordenar{
+  margin-top: 9px;
+  width: 20px;
+  height: 12px;
+}
+
+#filtrar-por{
+  padding-top: 3px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-right: 100px;
+  padding-left: 20px;
+  height: 30px;
+  display:flex;
+  flex-direction: row;
+}
+
+#ordenar-por{
+  font-size: 17px;
+  font-weight: 600;
+  padding-top: 3px;
+}
+
+
+.caixa-item-cartoes {
+  max-width: 1380px;
+  margin: 0 auto;
+  left:0;
+}
+
+
+.produto-categoria {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  font-family: 'Hind Guntur', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #28284A;
+  text-align: center;
+}
+
+.produto-categoria li {
+  list-style: none;
+  width: 145px;
+  height: 145px;
+  margin: 75px;
+  text-align: center;
+}
+
+.produto-categoria li p {
+   display: block;
+  padding-bottom: 5px;
+}
+
+
+.produto-categoria li img {
+  width: 145px;
+  height: 145px;
+  border-radius: 100%; 
+}
+
+/* produtos*/
+
+.produtos{
+  display:flex;
+  margin-top:50px;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+
+.caixa-item-cartoes {
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin: ;
+  }
+  
+.caixa-item-cartoes > div {
+  flex: 0 1 198px;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Hind Guntur', sans-serif;
+  }
+  
+.caixa-item-cartoes > div img {
+  width: 198px;
+  border-radius: 16px;
+    
+  }
+
+.fileira_cartoes{
+  display:flex;
+  flex-direction:row;
+  gap:100px;
+}
+
+.medida_cartao{
+  width:198px;
+}
+
+/*estilizar preço*/
+.preco {
+  text-align: center;
+  font-family: 'Hind Guntur', sans-serif;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #28284A;
+}
+
+/*estilizar o nome do produto*/
+.nome_produto{ 
+  text-align: center;
+  font-family: 'Hind Guntur', sans-serif;
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #28284A;  
+}
+
+
+/*estilizar o número de parcelas (exemplo: 2x por R$3,90)*/
+.parcelar{   
+  text-align: center;
+  font-family: 'Hind Guntur', sans-serif;
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #28284A;
+}
+
+.titulo_secao{
+  color: #28284A;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom:20px;
+}
+
+
+/* ver mais*/
+
+.ver_mais{
+  margin-top:40px;
+  margin-bottom:40px;
+  display: inline-block;
+  background-color: #8854D3;
+  color: #FDFDFD;
+  font-weight: 600;
+  text-decoration:none;
+  width:290px;
+  height: 66px;
+  border-radius: 38px;
+  font-size: 22px;
+  text-align:center;
+  line-height: 74px;
+  transition: 0.15s ease-in-out;
+}
+
+.ver_mais:active{
+  background-color: #4B04AE;
+  transition: 0.15s ease-in-out;
+}
+
+.ver_mais:hover{
+  color: #FDFDFD;
+}
+
+.alinhar_ver_mais{
+  margin-inline: 42%;
+}
+
+/* rodape*/
+
+.rodape{
+  width:100%;
+  height: 1020px;
+  margin-top: 5%;
+  background-color: #FDFDFD;
+}
+
+.rodape-items{
+  display:flex;
+  flex-direction: column;
+  padding-top:3%;
+}
+
+.rodape-cima{
+  display:flex;
+  justify-content: center;
+}
+
+.rodape-coluna1 {
+  display:flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+  color: #28284A;
+  gap: 20px;
+}
+
+.rodape-coluna1 a{
+  text-decoration: none;
+  color: #28284A;
+}
+
+.rodape-coluna2 {
+  display:flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+  color: #28284A;
+  gap: 20px;
+  margin-inline: 22%;
+}
+
+.rodape-coluna2 a{
+  text-decoration: none;
+  color: #28284A;
+}
+
+#rodape-coluna-titulo{
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: #875EC3;
+}
+
+.ropade-coluna-texto{
+  display:flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+  color: #28284A;
+  text-decoration: none;
+  gap: 50px;
+}
+
+.coluna-contato-alinhar-item{
+  display:flex;
+  flex-direction: column;
+}
+
+#linha-rodape1{
+  border-color: #F7ECFF;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.receba-por-email{
+  display: flex;
+  flex-direction: column;
+  background-color: #F7ECFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#receba-promos-novidades{
+  margin-left: 16.5%;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #4B04AE;
+}
+
+.cadastrar-rodape{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+}
+
+.cadastrar-rodape-digitar input[type=text]{
+  width:420px;
+  height:40px;
+  border:0;
+  border-bottom: 3px solid #875EC3;
+  padding: 0 5px;
+  padding-top:4px;
+  font-size: 19px;
+  box-sizing:border-box;
+  outline:0;
+  color: #58178A;
+  background-color: #F7ECFF;
+}
+
+.cadastrar-rodape-digitar input::placeholder{
+  color:#875EC3;
+}
+
+.cadastrar-rodape-botao{
+  display: inline-block;
+  background-color: #8854D3;
+  color: #FDFDFD;
+  font-weight: 600;
+  text-decoration:none;
+  width:250px;
+  height: 66px;
+  border-radius: 38px;
+  font-size: 24px;
+  text-align:center;
+  line-height: 74px;
+  transition: 0.15s ease-in-out;
+}
+
+.cadastrar-rodape-botao:active{
+  background-color: #4B04AE;
+  transition: 0.15s ease-in-out;
+}
+
+.cadastrar-rodape-botao:hover{
+  color: #FDFDFD;
+}
+
+.redes-sociais-rodape{
+  display:flex;
+  gap:8%;
+  margin-top: 3%;
+  justify-content: center;
+}
+
+.redes-sociais-rodape img{
+  width: 45px;
+  height: 45px;
+}
+
+#linha-rodape2{
+  border-color: #F7ECFF;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+#copyright-rodape{
+  color:#9363ca;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
