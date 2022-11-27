@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Carrinho de Compra | Yume</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap');
+  </style>
+
+  <!-- Icone do browser-->
+  <link rel="icon" type="image/x-icon" href="logos/Logo simplificado.svg">
+
+  <link href="style-carrinho.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- menu retângulo-->
+  <header class="menu_principal">
+
+    <!-- menu componentes-->
+    <nav class="menu">
+
+      <!-- logo-->
+      <div class="logo">
+        <a href="https://home-yume.beatrizakemi.repl.co/"><img src="logos/Logo linear yume.svg" width="100%" height="100%"></a>
+      </div>
+
+      <!-- categorias-->
+      <ul>
+        <li><a class="categoria1" href="https://pagina-de-categorias-escritorio.rafaelagrieco.repl.co/">ESCRITÓRIO</a></li>
+        <li><a class="categoria1" href="https://pagina-de-categorias-escritorio.rafaelagrieco.repl.co/organizacao.html">ORGANIZAÇÃO</a></li>
+        <li><a class="categoria1" href="https://pagina-de-categorias-escritorio.rafaelagrieco.repl.co/acessorios.html">ACESSÓRIOS</a></li>
+        <li><a class="categoria1" href="https://pagina-de-categorias-escritorio.rafaelagrieco.repl.co/yumyum.html">YUMYUM</a></li>
+        <li><a class="categoria2" href="https://parceria.juia0.repl.co/#">PARCERIA</a></li>
+      </ul>
+
+      <!-- icones -->
+         <a href="https://resultado-da-busca.juia0.repl.co/"><img class="busca" src="icones/busca.svg" width="10%" height="10%"></a>
+
+      <a href="https://carrinho.juia0.repl.co/"><img class="carrinho" src="icones/carrinho icone.svg" width="10%" height="10%"></a>
+  
+         <img class="perfil" src="icones/perfil icone.svg" width="10%" height="10%">
+
+    </nav>
+
+  </header>
+
+  <div class="cabecalho">
+    <div class="cabecalho_texto">
+      <p id="cabecalho_produto">Produto</p>
+      <p>Preço</p>
+      <p>Quantidade</p>
+      <p id="cabecalho_total">Total</p>
+    </div>
+  </div>
+
+  <div class="produtos_carrinho">
+    <div class="linha_info">
+      <div class="produto">
+        <img src="produtos na sacola/post-it gatinho.png">
+        <div class="nome_produto_alinhamento">
+          <p class="nome_produto">Post-It de Gatinhos (1 Unidade) - @catharine.ly</p>
+        </div>
+      </div>
+      <p class="cabecalho_preco">R$ 03,90</p>
+
+      <!-- botão de alterar quantidade de produto-->
+      <div class="botao_quantidade">
+        <div class="wrapper">
+            <span class="minus">-</span>
+            <span class="num">01</span>
+            <span class="plus">+</span>
+          </div>
+          <script>
+           const plus = document.querySelector(".plus"),
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".num");
+            let a = 1;
+            plus.addEventListener("click", ()=>{
+              a++;
+              a = (a < 10) ? "0" + a : a;
+              num.innerText = a;
+            });
+        
+            minus.addEventListener("click", ()=>{
+              if(a > 1){
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+              }
+            });
+        
+          </script>
+        </div>
+      <p class="cabecalho_total">R$ 07,80</p>
+      
+      <div class="deletar">
+        <img class="icone_deletar" src="icones/delete.svg">
+        <div class="deletar_overlay">
+          <img class="icone_deletar" src="icones/delete vermelho.svg">
+        </div>
+      </div>
+      
+    </div>
+    <hr>
+  </div>
+
+  <div class="produtos_carrinho">
+    <div class="linha_info">
+      <div class="produto">
+        <a href="https://pagina-do-produto-yume-verde-agua.juia0.repl.co/"><img src="produtos na sacola/caderno verde-água frente.png"></a>
+        <div class="nome_produto_alinhamento">
+          <p class="nome_produto">Caderno Lovely Friends (1 Unidade) - @illusbyjo</p>
+          <p>cor: verde-água</p>
+        </div>
+      </div>
+      <p class="cabecalho_preco">R$ 22,90</p>
+
+      <!-- botão de alterar quantidade de produto-->
+      <div class="botao_quantidade">
+        <div class="wrapper">
+            <span class="minus">-</span>
+            <span class="num">01</span>
+            <span class="plus">+</span>
+          </div>
+          <script>
+           const plus = document.querySelector(".plus"),
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".num");
+            let a = 1;
+            plus.addEventListener("click", ()=>{
+              a++;
+              a = (a < 10) ? "0" + a : a;
+              num.innerText = a;
+            });
+        
+            minus.addEventListener("click", ()=>{
+              if(a > 1){
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+              }
+            });
+        
+          </script>
+        </div>
+      <p class="cabecalho_total">R$ 22,90</p>
+
+      <div class="deletar">
+        <img class="icone_deletar" src="icones/delete.svg">
+        <div class="deletar_overlay">
+          <img class="icone_deletar" src="icones/delete vermelho.svg">
+        </div>
+      </div>
+      
+    </div>
+    <hr>
+  </div>
+
+  <div class="info_baixo">
+    <div class="cupoms">
+      <div class="cupom_campo">
+        <p id="cupom">Cupom de Desconto</p>
+        <div class="adicionar_codigo">
+          <input type="text" placeholder="*Código">
+          <button class="adicionar">
+            <p class="texto_adicionar">ADICIONAR</p>
+          </button>
+        </div>
+      </div>
+      
+      <div class="cupom_campo">
+        <p id="cupom">Código de Vendedor</p>
+        <div class="adicionar_codigo">
+          <input type="text" placeholder="*Código">
+          <button class="adicionar">
+            <p class="texto_adicionar">ADICIONAR</p>
+          </button>
+          
+          <a class="escolher_produtos" href="https://home-yume.beatrizakemi.repl.co/">ESCOLHER MAIS PRODUTOS</a>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="total_do_carrinho">
+      <p id="titulo_carrinho">Total do Carrinho</p>
+      <p id="subtotal">Subtotal: R$ 30,70</p>
+      <div id="entrega">
+        <p> Entrega: <p id="a_calcular">*a calcular*</p></p>
+      </div>
+      <div class="entrega_calcular">
+		    <div class="search_wrap search_wrap_6">
+    			<div class="search_box">
+    				<input type="text" class="input" placeholder="Digite seu CEP">
+    				<div class="btn">
+    					<p>OK</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+      
+      <hr>
+      <p id="total_carrinho">Total: R$ 30,70</p>
+      <a class="finalizar_compra" href="https://home-yume.beatrizakemi.repl.co/">FINALIZAR COMPRA</a>
+    </div>
+  
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+</body>
+
+</html>
